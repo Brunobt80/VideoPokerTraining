@@ -5,18 +5,8 @@
 #include "card.hpp"
 
 Card::Card(Suits s, Values v)
-{
-	is_held = false;
-	suit = s;
-	value = v;
-}
+: is_held{false}, suit{s}, value{v} {}
 
-Values Card::getValue()
-{
-	return value;
-}
+Values Card::GetValue() { return value; }
 
-Suits Card::getSuit()
-{
-	return suit;
-}
+Suits Card::GetSuit() {	return suit; }

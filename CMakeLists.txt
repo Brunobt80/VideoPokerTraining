@@ -3,4 +3,4 @@ project(VideoPokerTraining)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(VideoPokerTraining main.cpp graphics.cpp graphics.hpp enumeration.hpp card.cpp card.hpp)
+add_executable(VideoPokerTraining main.cpp graphics.cpp graphics.hpp enumeration.hpp card.cpp card.hpp deck.cpp deck.hpp)

@@ -4,10 +4,10 @@
 
 #include "graphics.hpp"
 
-void Graphics::printCards(std::vector<Card> &cards)
+void Graphics::printCards(const std::vector<Card>& cards)
 {
 	for (Card c: cards)
-		std::cout << value2char(c.getValue()) << suit2unicode(c.getSuit()) << "  ";
+		std::cout << value2char(c.GetValue()) << suit2unicode(c.GetSuit()) << "  ";
 }
 
 std::string Graphics::suit2unicode(Suits s)

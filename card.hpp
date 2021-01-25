@@ -16,8 +16,8 @@ private:
 
 public:
 	Card(Suits s, Values v);
-	Values getValue();
-	Suits getSuit();
+	Values GetValue();
+	Suits GetSuit();
 
 };
 

@@ -28,4 +28,18 @@ enum Suits{
 	spades = 4,
 };
 
+enum Hands
+{
+	None,
+	JacksOrBetter,
+	TwoPair,
+	ThreeOfAKind,
+	Straight,
+	Flush,
+	FullHouse,
+	FourOfAKind,
+	StraightFlush,
+	RoyalFlush,
+};
+
 #endif //VIDEOPOKERTRAINING_ENUMERATION_HPP

@@ -13,7 +13,7 @@
 
 class Graphics{
 public:
-    static void printCards(std::vector<Card> &cards);
+    static void printCards(const std::vector<Card>& cards);
     static std::string suit2unicode(Suits s);
 	static std::string value2char(Values v);
 };
