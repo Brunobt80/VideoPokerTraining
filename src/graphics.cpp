@@ -6,8 +6,16 @@
 
 void Graphics::printCards(const std::vector<Card>& cards)
 {
+	Suits suit;
 	for (Card c: cards)
-		std::cout << value2char(c.GetValue()) << suit2unicode(c.GetSuit()) << "  ";
+	{
+		suit = c.GetSuit();
+		if (suit==hearts || suit==diamonds)
+			std::cout << RED << value2char(c.GetValue()) << suit2unicode(suit) << "  " NC;
+		else
+			std::cout << value2char(c.GetValue()) << suit2unicode(suit) << "  ";
+	}
+
 }
 
 std::string Graphics::suit2unicode(Suits s)
