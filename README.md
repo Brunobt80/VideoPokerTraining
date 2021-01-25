@@ -1,2 +1,2 @@
 # VideoPokerTraining
-This is a small video poker console game (jacks 'n better) under development.
+This is a small video poker console game (jacks or better) under development.
