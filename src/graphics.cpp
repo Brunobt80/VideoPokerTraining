@@ -2,7 +2,7 @@
 // Created by bbt on 24/01/2021.
 //
 
-#include "graphics.hpp"
+#include "../include/graphics.hpp"
 
 void Graphics::printCards(const std::vector<Card>& cards)
 {

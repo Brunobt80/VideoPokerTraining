@@ -3,7 +3,7 @@
 //
 
 
-#include "deck.hpp"
+#include "../include/deck.hpp"
 
 std::vector<Card> Deck::cards;
 std::default_random_engine Deck::generator;

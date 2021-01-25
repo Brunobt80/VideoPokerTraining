@@ -1,5 +1,5 @@
-#include "graphics.hpp"
-#include "deck.hpp"
+#include "../include/graphics.hpp"
+#include "../include/deck.hpp"
 
 int main() {
     Graphics graphics {};

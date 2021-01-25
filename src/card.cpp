@@ -2,7 +2,7 @@
 // Created by bbt on 24/01/2021.
 //
 
-#include "card.hpp"
+#include "../include/card.hpp"
 
 Card::Card(Suits s, Values v)
 : is_held{false}, suit{s}, value{v} {}

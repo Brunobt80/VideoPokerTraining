@@ -21,7 +21,7 @@ enum Values{
 	King = 13,
 };
 
-enum Suits{
+enum Suits {
 	clubs = 1,
 	diamonds = 2,
 	hearts = 3,
@@ -41,5 +41,7 @@ enum Hands
 	StraightFlush,
 	RoyalFlush,
 };
+
+
 
 #endif //VIDEOPOKERTRAINING_ENUMERATION_HPP
