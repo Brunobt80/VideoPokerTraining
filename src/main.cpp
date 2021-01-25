@@ -1,15 +1,13 @@
 #include "../include/graphics.hpp"
-#include "../include/deck.hpp"
+#include "../include/game.hpp"
 
 int main() {
     Graphics graphics {};
 
-	Deck deck;
-	Deck::ShuffleCards();
-	std::vector<Card> cards;
-	cards = deck.GetCards();
+	Game game;
+	game.deck.ShuffleCards();
 
-	graphics.printCards(cards);
+	graphics.printCards(game.deck.GetCards(5));
 
     return 0;
 }

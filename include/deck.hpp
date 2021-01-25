@@ -20,7 +20,7 @@ private:
 public:
 	Deck();
 	static void ShuffleCards();
-	static std::vector<Card> GetCards();
+	static std::vector<Card> GetCards(int i);
 
 };
 

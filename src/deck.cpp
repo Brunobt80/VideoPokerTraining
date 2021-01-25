@@ -29,9 +29,14 @@ int Deck::Dice(int from)
 	return distribution(generator);
 }
 
-std::vector<Card> Deck::GetCards()
+std::vector<Card> Deck::GetCards(int i)
 {
-	return cards;
+	std::vector<Card> tempCards;
+	for (int j = 0; j < i; ++j)
+	{
+		tempCards.emplace_back(cards.at(j));
+	}
+	return tempCards;
 }
 
 void Deck::ShuffleCards()
