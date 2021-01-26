@@ -3,11 +3,12 @@
 
 int main() {
     Graphics graphics {};
-
 	Game game;
 	game.deck.ShuffleCards();
-
 	graphics.printCards(game.deck.GetCards(5));
+
+	std::cout << std::endl;
+
 
     return 0;
 }

@@ -7,10 +7,13 @@
 
 #include "enumeration.hpp"
 
+// Class representing each card of the deck
+// A Deck contains a vector of cards
+// which are initialized in the constructor
 class Card
 {
 private:
-	bool is_held;
+	bool isHeld;
 	Suits suit;
 	Values value;
 
@@ -18,6 +21,7 @@ public:
 	Card(Suits s, Values v);
 	Values GetValue();
 	Suits GetSuit();
+	bool GetIsHeld();
 
 };
 

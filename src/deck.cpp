@@ -19,7 +19,7 @@ Deck::Deck()
 		}
 	}
 
-	// feeding the rng
+	// feeding the rng with current time
 	generator.seed(std::chrono::system_clock::now().time_since_epoch().count());
 }
 
@@ -41,10 +41,17 @@ std::vector<Card> Deck::GetCards(int i)
 
 void Deck::ShuffleCards()
 {
-	// shuffling the deck
-	for (int i = 0; i < 51; ++i)
+	// shuffling the deck until the 10th position,
+	// that is, the maximum number of cards exposed
+	// to the player at each round
+	for (int i = 0; i < 10; ++i)
 	{
 		int j = Dice(i);
 		std::swap(cards.at(i), cards.at(j));
 	}
+}
+
+std::vector<Card> Deck::Draw()
+{
+	return GetCards(5);
 }

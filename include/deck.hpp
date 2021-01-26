@@ -11,16 +11,25 @@
 #include "card.hpp"
 #include "enumeration.hpp"
 
+// The Deck class, besides contains the vector of cards,
+// provides the methods to shuffle and draw/deal
 class Deck
 {
 private:
 	static std::vector<Card> cards;
 	static std::default_random_engine generator;
+	// Dice returns a number between 'from' and 51
+	// and it's used to shuffle the deck
 	static int Dice(int from);
+	// GetCards returns 'i' cards from the top
+	// of the deck (cards variable)
+	static std::vector<Card> GetCards(int i);
 public:
 	Deck();
 	static void ShuffleCards();
-	static std::vector<Card> GetCards(int i);
+	static std::vector<Card> Draw();
+	static std::vector<Card> Deal();
+
 
 };
 

@@ -8,15 +8,17 @@
 
 #include "deck.hpp"
 
+// The Game class controls every aspect of the gameplay
 class Game
 {
 public:
 	static const int betAmount = 5;
-	static const int initialCredit = 100;
-	int credit;
+	const int initialCredit = 100;
+	static int credit;
 	static Deck deck;
-	static int Payout(Hands hand);
+
 	Game();
+	static int Payout(Hands hand);
 
 };
 

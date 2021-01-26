@@ -47,6 +47,7 @@ int Game::Payout(Hands hand)
 	return payout;
 }
 
+int Game::credit;
 Game::Game()
 {
 	credit = initialCredit;
