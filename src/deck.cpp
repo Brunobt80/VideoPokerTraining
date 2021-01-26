@@ -29,12 +29,12 @@ int Deck::Dice(int from)
 	return distribution(generator);
 }
 
-std::vector<Card> Deck::GetCards(int i)
+std::vector<Card> Deck::GetCards(int begin, int end)
 {
 	std::vector<Card> tempCards;
-	for (int j = 0; j < i; ++j)
+	for (int i = begin; i < end + 1; ++i)
 	{
-		tempCards.emplace_back(cards.at(j));
+		tempCards.emplace_back(cards.at(i));
 	}
 	return tempCards;
 }
@@ -53,5 +53,10 @@ void Deck::ShuffleCards()
 
 std::vector<Card> Deck::Draw()
 {
-	return GetCards(5);
+	return GetCards(0,4);
+}
+
+std::vector<Card> Deck::Deal(int qty)
+{
+	return GetCards(5,4+qty);
 }

@@ -2,11 +2,16 @@
 #include "../include/game.hpp"
 
 int main() {
+	// initializing variables
     Graphics graphics {};
 	Game game;
+	// shuffling the cards
 	game.deck.ShuffleCards();
-	graphics.printCards(game.deck.GetCards(5));
-
+	// drawing
+	graphics.printCards(game.deck.Draw());
+	std::cout << std::endl;
+	// dealing
+	graphics.printCards(game.deck.Deal(3));
 	std::cout << std::endl;
 
 

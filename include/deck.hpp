@@ -18,17 +18,19 @@ class Deck
 private:
 	static std::vector<Card> cards;
 	static std::default_random_engine generator;
-	// Dice returns a number between 'from' and 51
+	// Dice: returns a number between 'from' and 51
 	// and it's used to shuffle the deck
 	static int Dice(int from);
-	// GetCards returns 'i' cards from the top
+	// GetCards: returns cards from the top
 	// of the deck (cards variable)
-	static std::vector<Card> GetCards(int i);
+	// from position 'begin' to 'end'
+	static std::vector<Card> GetCards(int begin, int end);
 public:
 	Deck();
 	static void ShuffleCards();
 	static std::vector<Card> Draw();
-	static std::vector<Card> Deal();
+	static std::vector<Card> Deal(int qty);
+
 
 
 };
