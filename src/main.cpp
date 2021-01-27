@@ -5,13 +5,19 @@ int main() {
 	// initializing variables
     Graphics graphics {};
 	Game game;
+
 	// shuffling the cards
 	game.deck.ShuffleCards();
+
 	// drawing
-	graphics.printCards(game.deck.Draw());
+	game.deck.Draw();
+	graphics.printCards(game.deck.playerCards);
 	std::cout << std::endl;
+
 	// dealing
-	graphics.printCards(game.deck.Deal(3));
+	std::vector<int> idx {0,4};
+	game.deck.Deal(idx);
+	graphics.printCards(game.deck.playerCards);
 	std::cout << std::endl;
 
 

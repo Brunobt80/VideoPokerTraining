@@ -7,6 +7,7 @@
 
 std::vector<Card> Deck::cards;
 std::default_random_engine Deck::generator;
+std::vector<Card> Deck::playerCards;
 
 Deck::Deck()
 {
@@ -51,12 +52,21 @@ void Deck::ShuffleCards()
 	}
 }
 
-std::vector<Card> Deck::Draw()
+void Deck::Draw()
 {
-	return GetCards(0,4);
+	playerCards = GetCards(0,4);
 }
 
-std::vector<Card> Deck::Deal(int qty)
+void Deck::Deal(std::vector<int> pos)
 {
-	return GetCards(5,4+qty);
+	int q = pos.size();
+	std::vector<Card> tempDraw = GetCards(5,4+q);
+
+	int j {0};
+	for (auto i: pos)
+	{
+		playerCards.at(i) = tempDraw.at(j);
+		++j;
+	}
+
 }

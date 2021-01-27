@@ -25,11 +25,14 @@ private:
 	// of the deck (cards variable)
 	// from position 'begin' to 'end'
 	static std::vector<Card> GetCards(int begin, int end);
+
 public:
+	static std::vector<Card> playerCards;
+
 	Deck();
 	static void ShuffleCards();
-	static std::vector<Card> Draw();
-	static std::vector<Card> Deal(int qty);
+	static void Draw();
+	static void Deal(std::vector<int> pos);
 
 
 
