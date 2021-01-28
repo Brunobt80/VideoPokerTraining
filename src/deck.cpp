@@ -60,6 +60,12 @@ void Deck::Draw()
 void Deck::Deal(std::vector<int> pos)
 {
 	int q = pos.size();
+
+	if (q==0)
+	{
+		return;
+	}
+
 	std::vector<Card> tempDraw = GetCards(5,4+q);
 
 	int j {0};
