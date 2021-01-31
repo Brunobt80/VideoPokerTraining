@@ -52,12 +52,12 @@ void Deck::ShuffleCards()
 	}
 }
 
-void Deck::Draw()
+void Deck::Deal()
 {
 	playerCards = GetCards(0,4);
 }
 
-void Deck::Deal(std::vector<int> pos)
+void Deck::Draw(std::vector<int> pos)
 {
 	int q = pos.size();
 

@@ -12,7 +12,7 @@
 #include "enumeration.hpp"
 
 // The Deck class, besides contains the vector of cards,
-// provides the methods to shuffle and draw/deal
+// provides the methods to shuffle and deal/draw
 class Deck
 {
 private:
@@ -31,8 +31,8 @@ public:
 
 	Deck();
 	static void ShuffleCards();
-	static void Draw();
-	static void Deal(std::vector<int> pos);
+	static void Deal();
+	static void Draw(std::vector<int> pos);
 
 
 

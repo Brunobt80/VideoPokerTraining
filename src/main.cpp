@@ -16,8 +16,8 @@ int main()
 		// shuffling the cards
 		game.deck.ShuffleCards();
 
-		// drawing
-		game.deck.Draw();
+		// dealing
+		game.deck.Deal();
 		graphics.printCards(game.deck.playerCards);
 		std::cout << std::endl;
 
@@ -27,7 +27,7 @@ int main()
 		std::cout << "Choose which cards to DISCARD: ";
 		std::cin >> cards2discard;
 
-		// dealing if player chooses so
+		// drawing if player chooses so
 		if (cards2discard != "-1")
 		{
 			for (auto c: cards2discard)
@@ -38,14 +38,14 @@ int main()
 			}
 
 			// dealing
-			game.deck.Deal(index2discard);
+			game.deck.Draw(index2discard);
 		}
 
 		// showing final cards
 		graphics.printCards(game.deck.playerCards);
 		std::cout << std::endl;
 
-		// assessing the player`s hand
+		// assessing the player's hand
 		Hands hand{game.Check(game.deck.playerCards)};
 		std::cout << "Results: " << hand << std::endl;
 
