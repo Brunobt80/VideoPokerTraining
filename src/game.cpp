@@ -4,12 +4,12 @@
 
 #include "../include/game.hpp"
 
-int Game::credit;
 Game::Game()
 {
-	credit = initialCredit;
 	deck = Deck();
 }
+
+int Game::credit = initialCredit; // static member initialization
 
 int Game::Payout(Hands hand)
 {
@@ -255,4 +255,14 @@ bool Game::comparator_function(Card a, Card b)
 Game::~Game()
 {
 
+}
+
+void Game::Credit(int amount)
+{
+	credit = credit + amount;
+}
+
+int Game::GetCredit()
+{
+	return credit;
 }

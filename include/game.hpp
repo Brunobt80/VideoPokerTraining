@@ -12,6 +12,7 @@
 class Game
 {
 private:
+	static int credit;
 	static std::vector<int> cardsCounter(std::vector<Card>&);
 	static bool HasJacksOrBetter(std::vector<int> &cardsCount);
 	static bool HasTwoPair(std::vector<int> &cardsCount);
@@ -23,10 +24,11 @@ private:
 	static bool HasStraight(std::vector<Card> &cards);
 
 public:
-	static const int betAmount = 5;
-	const int initialCredit = 100;
-	static int credit;
+	static const int betAmount = 1;
+	static const int initialCredit = 20;
 	static Deck deck;
+	static void Credit(int);
+	static int GetCredit();
 
 	Game();
 	static int Payout(Hands);

@@ -6,13 +6,18 @@
 int main()
 {
 	// initializing variables
-	Graphics graphics{};
+	Graphics graphics;
 	Game game;
 
 	std::string response {"yes"};
 
 	while(response == "yes")
 	{
+		std::cout << "****************************************" << std::endl;
+
+		// betting
+		game.Credit(-1*game.betAmount);
+
 		// shuffling the cards
 		game.deck.ShuffleCards();
 
@@ -49,10 +54,15 @@ int main()
 		Hands hand{game.Check(game.deck.playerCards)};
 		std::cout << "Results: " << hand << std::endl;
 
+		// giving player her winnings
+		int win = game.Payout(hand);
+		game.Credit(win);
+		std::cout << "You won " << win;
+		std::cout << " credits and your total balance is " << game.GetCredit() << std::endl;
+
 		// play again?
 		std::cout << "Again? ";
 		std::cin >> response;
-		std::cout << std::endl;
 	}
 
 
