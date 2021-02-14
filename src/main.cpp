@@ -1,9 +1,25 @@
 #include "../include/graphics.hpp"
 #include "../include/game.hpp"
+#include "../include/MainWindow.hpp"
 #include <iostream>
 #include <string>
 
-int main()
+class MyApp: public wxApp
+{
+public:
+	// MainApp just acts as a container for the window
+	bool OnInit() override
+	{
+		auto *frame = new class JacksOrBetter(wxT("JacksOrBetter"), wxDefaultPosition, wxSize(600, 300));
+		frame->Show( true ); // show the window
+		SetTopWindow(frame); // set it as the main window (by default the first frame is set as the main window)
+		return true;
+	}
+};
+
+wxIMPLEMENT_APP(MyApp);
+
+int main_()
 {
 	// initializing variables
 	Graphics graphics;
@@ -64,7 +80,6 @@ int main()
 		std::cout << "Again? ";
 		std::cin >> response;
 	}
-
 
     return 0;
 }
